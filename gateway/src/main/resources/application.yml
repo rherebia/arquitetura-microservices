@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: gateway
+
+server:
+  port: 8888
+  
+zuul:
+  routes:
+    passaporte-ws:
+      serviceId: passaporte-ws
+    seguranca-ws:
+      serviceId: seguranca-ws
+
+eureka:
+  client:
+    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      

@@ -1,0 +1,15 @@
+server:
+  port: 0
+  
+spring:
+  application:
+    name: passaporte-ws
+
+eureka:
+  client:
+    enabled: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
